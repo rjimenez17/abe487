@@ -3,8 +3,6 @@
 sub MAIN (Str $file!) {
 	die "Not a file ($file)" unless $file.IO.f;
 
-	for $file.IO.lines -> $line {
-		put $line.reverse;
-
-	}
+	put $file.IO.lines.reverse.join("\n")
+		
 }
