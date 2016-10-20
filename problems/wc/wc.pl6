@@ -3,13 +3,11 @@
 sub MAIN (Str $file!) {
 	die "Not a file ($file)" unless $file.IO.f;
 
-my @all = $file.IO.lines;
-	say @all.elems;
+        my $lines = $file.IO.lines.elems;
 
-my @words = $file.IO.lines.words.elems;
-	say @words;
+        my $words = $file.IO.lines.words.elems;
 
-my $data = slurp $file;
-	say $data.chars;
+        my $data = slurp $file;
 
+        put "lines ($lines) words ($words) chars ({$data.chars})";
 }
