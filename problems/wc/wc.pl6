@@ -5,5 +5,8 @@ sub MAIN (Str $file!) {
 
 my @all = $file.IO.lines;
 
-say @all.elems;
+	say @all.elems;
+
+my $data = slurp $file;
+	say $data.chars
 }
