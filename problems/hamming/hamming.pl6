@@ -4,7 +4,7 @@ sub MAIN (Str $s1!, Str	$s2!) {
 
 	my $str1 = $s1.chars;
 	my $str2 = $s2.chars;
-	my $hamming_distance = abs ($str1 - $str2);
+	my $hamming_distance = ($str1 - $str2).abs;
 	my @s1 = $s1.comb;
 	my @s2 = $s2.comb;
 	
